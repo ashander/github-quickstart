@@ -1,0 +1,161 @@
+---
+title: "Github Quickstart for Scientists (e.g., not social coders)"
+author: "*Compiled on `r date()` by `r Sys.info()['user']`*"
+output: 
+  html_document:
+    toc: true
+    number_sections: true
+    theme: cerulean
+    highlight: haddock
+    includes: 
+      in_header: ohi_hdr.html
+  pdf_document:
+    toc: true
+---
+
+# What is Git/Github?
+
+**Git**: Open source distributed version control system....
+
+**GitHub**: Web-based Git repository hosting service
+
+From here on, I will just refer to Github.
+
+# Why Git/Github can be confusing for scientists
+Github was developed for social coding (i.e., sort of like an open source Wikipedia for programmers). Consequently, much of the functionality and terminology of Github (e.g., branches and pull requests) isn’t necessary for a scientist getting started on Github.  
+
+These concepts are more important for coders who want the entire coding community (and not just people working on the same project) to be able to suggest changes to their code.  This isn’t how most scientists will use Github.  
+
+To get the full functionality of Github, you will eventually want to learn other concepts and be familiar with the shell.  But, this can wait.  
+
+> **Goals**: Only introduce the features and terminology that scientists need to learn in order to begin managing their projects.
+
+> Demonstrate a workflow using R, RStudio, and Github.
+
+
+# Why should scientists use Github?
+
+1. Ends (or, nearly ends) the horror of keeping track of versions.
+
+Basically, we go from this:
+
+![](images/MessySaves.png)
+
+To this:
+
+![](images/GitOrganization.png)
+
+When you open your respository, you only see the most recent version.  But, it easy to compare versions, and you can easily revert to previous versions. 
+
+2. Improves collaborative efforts.  Different researchers can work on the same files at the same time!
+
+3. It is easy to share and distribute files through the Github website.
+
+# Getting started
+You will need to get a [Github account](https://github.com).  You will also need to install the [Git software](https://git-scm.com/downloads) on your computer.  There are good instructions for installing these programs [here, Section 5.1](http://ohi-science.org/manual/#toolbox-software).
+
+> **For Github accounts**: If you are a student you can get the micro account which includes 5 private repositories for free (normally a $7/month value).  You can sign up for the student account [here](https://education.github.com/pack).  Instructors can also request a free organization [account, "Request a discount"](https://education.github.com/).
+
+I use RStudio to interact with Github.  There is also a stand-alone Git Gui, but I have never actually used it. 
+
+You will also need to install [R](https://cran.r-project.org/) and [RStudio](https://www.rstudio.com/products/RStudio/). 
+
+All three programs will need to be talking to each other.  Usually this magically happens, but sometimes trouble shooting is required.  Here is some information about fixing [common errors](http://ohi-science.org/manual/#toolbox-troubleshooting). 
+When RStudio and Github are communicating, there should be a Git tab in RStudio:
+
+![](images/Rstudio_and_Git_tab.png)
+
+# Some Github terminology
+
+* **Organization**: The Github account (e.g., nazrug).
+* **Repository**: A folder within the organization that includes files dedicated to a project.
+* **Local Github**: Copies of Github files located your computer.
+* **Remote Github**: Github files lcoated on the https://github.com website.
+* **Clone**: Process of making a local copy of a remote Github repository.  This only needs to be done once (unless you mess up your local copy).
+* **Pull**: Copy changes on the remote Github repository to your local Github repository.  This is useful if multiple people are making changes to a repository.
+* **Push**: Save local changes to remote Github
+
+![](images/push_pull_clone.png)
+
+# Create a repository on your Github account
+### Step 1
+![](images/create_repository.png)
+
+### Step 2
+![](images/create_repository_2.png)
+
+The *Add gitignore* option adds a document where you can identify files or file-types you want Github to ignore. These files will stay in on the local Github folder (the one on your computer), but will not be uploaded onto the web version of Github.
+
+The *Add a license* option adds a license that describes how other people can use your Github files (e.g., open source…but no one can profit from them….etc.).  This usually isn’t something you need to worry about.
+Our new repository!  
+
+Notice how the README.md file we created is automatically displayed at the bottom.
+
+![](images/new_repository.png)
+
+# Clone your repository
+This copies the Remote repository onto your local computer.
+
+### Step 1
+Copy the web address of the repository you want to clone.
+
+![](images/clone_step1.png)
+
+### Step 2
+In RStudio:
+![](images/new_project_1.png)
+![](images/new_project_2.png)
+![](images/new_project_3.png)
+![](images/new_project_4.png)
+
+If everything went well, the repository will be added to the list located here:
+![](images/select_project.png)
+
+And the repository will be saved to the Github folder on your computer:
+![](images/cloned_repository.png)
+
+Ta da!!!!  The folder doesn't contain much of interest, but we are going to change that.
+
+# Add files to local Github folder and save to remote Github
+The repository will contain:
+
+* .gitignore file
+* README.md
+* Rproj
+And, I typically create the following:
+* folders for "data" and "figures"  
+* R scripts
+* etc.
+
+Whenever I add or change a file in the repository, it shows up in the Git tab of RStudio as a modified file:
+
+![](images/modify_files.png)
+
+These are the codes to describe how the files are changed, (from the RStudio [cheatsheet](http://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf)):
+![](images/modified.png)
+
+When you are ready to commit your changes:
+
+### STEP 1: 
+From the Git tab, "Pull" the repository.  This makes sure your local repository is synced with the remote repository.  This is very important if other people are making changes to the repository.
+
+![](images/pull.png)
+
+### STEP 2:
+Stage the files you want to commit.  In RStudio, this involves checking the "Staged" boxes:
+
+![](images/staged.png)
+
+### STEP 3:
+![](images/commit.png)
+
+
+
+# Additional resources
+A good [reference](https://git-scm.com/book/en/v2) for learning about Github.
+A Github [cheatsheet](https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf)
+
+
+# Other things:
+rendering html files
+md files displayed automatically
