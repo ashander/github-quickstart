@@ -4,7 +4,7 @@ author: "*Compiled on `r date()` by `r Sys.info()['user']`*"
 output: 
   html_document:
     toc: true
-    number_sections: true
+    number_sections: false
     theme: cerulean
     highlight: haddock
     includes: 
@@ -122,7 +122,9 @@ The repository will contain:
 * .gitignore file
 * README.md
 * Rproj
+
 And, I typically create the following:
+
 * folders for "data" and "figures"  
 * R scripts
 * etc.
@@ -134,21 +136,32 @@ Whenever I add or change a file in the repository, it shows up in the Git tab of
 These are the codes to describe how the files are changed, (from the RStudio [cheatsheet](http://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf)):
 ![](images/modified.png)
 
-When you are ready to commit your changes:
+When you are ready to commit your changes, you follow these steps:
 
-### STEP 1: 
+![](images/commit_overview.png)
+
+We walk through this process below:
+
+### Pull 
 From the Git tab, "Pull" the repository.  This makes sure your local repository is synced with the remote repository.  This is very important if other people are making changes to the repository.
 
 ![](images/pull.png)
 
-### STEP 2:
+### Stage
 Stage the files you want to commit.  In RStudio, this involves checking the "Staged" boxes:
 
 ![](images/staged.png)
 
-### STEP 3:
+### Commit
 ![](images/commit.png)
 
+### Push
+![](images/push.png)
+
+### Check remote Github
+The files should be there:
+
+![](images/Github_remote.png)
 
 
 # Additional resources
