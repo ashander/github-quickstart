@@ -28,24 +28,37 @@ These concepts are more important for coders who want the entire coding communit
 
 To get the full functionality of Github, you will eventually want to learn other concepts.  But, this can wait.  
 
-> **Goals**: Only introduce the features and terminology that scientists need to learn in order to begin managing their projects.
+**Goals**: 
 
-> Demonstrate a workflow using R, RStudio, and Github.
+1. Only introduce the features and terminology that scientists need to learn in order to begin managing their projects.
+
+2. Demonstrate a workflow using R, RStudio, and Github.
 
 
 # Why should scientists use Github?
 
 1. Ends (or, nearly ends) the horror of keeping track of versions.
 
-Basically, we go from this:
+  Basically, we go from this: 
+<br />
+<br />
+
 
 ![](images/MessySaves.png)
+<br />
+<br />
 
 To this:
+<br />
+<br />
 
 ![](images/GitOrganization.png)
+<br />
+<br />
 
 When you open your respository, you only see the most recent version.  But, it easy to compare versions, and you can easily revert to previous versions. 
+<br />
+<br />
 
 2. Improves collaborative efforts.  Different researchers can work on the same files at the same time!
 
@@ -53,8 +66,12 @@ When you open your respository, you only see the most recent version.  But, it e
 
 # Getting started
 You will need to get a [Github account](https://github.com).  You will also need to install the [Git software](https://git-scm.com/downloads) on your computer.  There are good instructions for installing these programs [here, Section 5.1](http://ohi-science.org/manual/#toolbox-software).
+<br />
+<br />
 
-> **For Github accounts**: If you are a student you can get the micro account which includes 5 private repositories for free (normally a $7/month value).  You can sign up for the student account [here](https://education.github.com/pack).  Instructors can also request a free organization [account, "Request a discount"](https://education.github.com/).
+> If you are a student you can get the micro account which includes 5 private repositories for free (normally a $7/month value).  You can sign up for the student account [here](https://education.github.com/pack).  Instructors can also request a free organization [account, "Request a discount"](https://education.github.com/).
+<br />
+<br />
 
 I use RStudio to interact with Github.  There is also a stand-alone Git Gui, but I have never actually used it. 
 
@@ -62,8 +79,12 @@ You will also need to install [R](https://cran.r-project.org/) and [RStudio](htt
 
 All three programs will need to be talking to each other.  Usually this magically happens, but sometimes trouble shooting is required.  Here is some information about fixing [common errors](http://ohi-science.org/manual/#toolbox-troubleshooting). 
 When RStudio and Github are communicating, there should be a Git tab in RStudio:
+<br />
+<br />
 
 ![](images/Rstudio_and_Git_tab.png)
+<br />
+<br />
 
 # Some Github terminology
 
@@ -74,15 +95,28 @@ When RStudio and Github are communicating, there should be a Git tab in RStudio:
 * **Clone**: Process of making a local copy of a remote Github repository.  This only needs to be done once (unless you mess up your local copy).
 * **Pull**: Copy changes on the remote Github repository to your local Github repository.  This is useful if multiple people are making changes to a repository.
 * **Push**: Save local changes to remote Github
+<br />
+<br />
 
 ![](images/push_pull_clone.png)
+<br />
+<br />
 
 # Create a repository on your Github account
+
 ### Step 1
+<br />
+<br />
 ![](images/create_repository.png)
+<br />
+<br />
 
 ### Step 2
+<br />
+<br />
 ![](images/create_repository_2.png)
+<br />
+<br />
 
 The *Add gitignore* option adds a document where you can identify files or file-types you want Github to ignore. These files will stay in on the local Github folder (the one on your computer), but will not be uploaded onto the web version of Github.
 
@@ -90,36 +124,76 @@ The *Add a license* option adds a license that describes how other people can us
 Our new repository!  
 
 Notice how the README.md file we created is automatically displayed at the bottom.
+<br />
+<br />
 
 ![](images/new_repository.png)
+<br />
+<br />
 
 # Clone your repository
 This copies the Remote repository on Github.com to your local computer.
 
 ### Step 1
 Copy the web address of the repository you want to clone:
+<br />
+<br />
 
 ![](images/clone_step1.png)
+<br />
+<br />
 
 And, then, from RStudio:
+<br />
+<br />
 
 ### Step 2
+
 ![](images/new_project_1.png)
+<br />
+<br />
 
 ### Step 3
+
+<br />
+<br />
+
 ![](images/new_project_2.png)
+<br />
+<br />
 
 ### Step 4
+
+<br />
+<br />
+
 ![](images/new_project_3.png)
+<br />
+<br />
 
 ### Step 5
+
+<br />
+<br />
+
 ![](images/new_project_4.png)
+
+<br />
+<br />
 
 If everything went well, the repository will be added to the list located here:
 ![](images/select_project.png)
 
+<br />
+<br />
+
 And the repository will be saved to the Github folder on your computer:
+<br />
+<br />
+
 ![](images/cloned_repository.png)
+<br />
+<br />
 
 Ta da!!!!  The folder doesn't contain much of interest, but we are going to change that.
 
@@ -137,38 +211,63 @@ And, I typically create the following:
 * etc.
 
 Whenever I add or change a file in the repository, it shows up in the Git tab of RStudio as a modified file:
+<br />
+<br />
 
 ![](images/modify_files.png)
+<br />
+<br />
 
 These are the codes to describe how the files are changed, (from the RStudio [cheatsheet](http://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf)):
 ![](images/modified.png)
 
 When you are ready to commit your changes, you follow these steps:
+<br />
+<br />
 
 ![](images/commit_overview.png)
+<br />
+<br />
 
 We walk through this process below:
 
 ### Pull 
 From the Git tab, "Pull" the repository.  This makes sure your local repository is synced with the remote repository.  This is very important if other people are making changes to the repository.
+<br />
+<br />
 
 ![](images/pull.png)
+<br />
+<br />
 
 ### Stage
 Stage the files you want to commit.  In RStudio, this involves checking the "Staged" boxes:
+<br />
 
 ![](images/staged.png)
+<br />
+<br />
 
 ### Commit
+<br />
+
 ![](images/commit.png)
+<br />
+<br />
 
 ### Push
+<br />
+
 ![](images/push.png)
+<br />
 
 ### Check remote Github
 The files should be there:
+<br />
 
 ![](images/Github_remote.png)
+<br />
+<br />
 
 # Tracking changes in your files
 Whenever you make changes to the files in Github, you will walk through the Pull -> Stage -> Commit -> Push steps.
@@ -176,35 +275,68 @@ Whenever you make changes to the files in Github, you will walk through the Pull
 I tend to do this every time I finish a task (basically when I start getting nervous that I will lose my work).  Once something is committed, it is very difficult to lose it.
 
 One thing that I love about about Github is that it is easy to see how files have changed over time.  Usually I compare commits through github.com:
+<br />
+<br />
 
 ![](images/commit_history.png)
+<br />
+<br />
+<br />
+<br />
+
 
 ![](images/commit_compare_2.png)
+<br />
+<br />
 
 You can click on the commits to see how the files changed from the previous commit:
+<br />
+<br />
 
 ![](images/commit_compare_3.png)
+<br />
+<br />
 
 # The README.md
 The README file is a markdown file.  
 
 Markdown allows you to write an easy to read text document with simple formatting that is converted to HTML.
 (this document is an R markdown file, which is a markdown file that supports R code).  There are some good [cheatsheets](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet) to get you started, and here is one built into RStudio:
+<br />
+<br />
 
 ![](images/md_cheatsheet.png)
+<br />
+<br />
 
 A README.md file can be added to every folder in a repository, and they are automatically displayed when the repository is opened on github.com  
 
-I use this file to record metadata.
+I use README.md files to record metadata.
+
+To see what your formatted document will look like:
+<br />
+<br />
+
+![](images/rendered_markdown.png)
+<br />
+<br />
+
+This will open an new window that displays the html version of your markdown file:
+<br />
+<br />
+
+![](images/md_example.png)
+<br />
+
+For on the fly rendering, the [atom](https://atom.io/) text editor is good.
 
 An [example](https://github.com/OHI-Science/ohiprep/tree/master/Global/NCEAS-Regions_v2014) of a Markdown file displayed in Github. 
-
 
 # Additional resources
 A good [reference](https://git-scm.com/book/en/v2) for learning about Github.
 A Github [cheatsheet](https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf)
 
-# So many other things
+# So many other things to learn:
 1. Rendering html files from github.com...it's almost like you have your own website!
 2. Reading in datasets from different commits (very handy to troubleshoot and understand how data may have changed over time).
 3. Using an issues repository to document information and track progress.
