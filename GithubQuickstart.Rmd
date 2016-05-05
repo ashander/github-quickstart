@@ -22,9 +22,9 @@ output:
 From here on, I will just refer to Github.
 
 # Why Git/Github can be confusing for scientists
-Github was developed for social coding (i.e., sort of like an open source Wikipedia for programmers). Consequently, much of the functionality and terminology of Github (e.g., branches and pull requests) isn’t necessary for a scientist getting started.  
+Github was developed for social coding (i.e., sort of like an open source Wikipedia for programmers). Consequently, much of the functionality and terminology of Github (e.g., branches and pull requests) isn't necessary for a scientist getting started.  
 
-These concepts are more important for coders who want the entire coding community (and not just people working on the same project) to be able to suggest changes to their code.  This isn’t how most scientists will use Github.  
+These concepts are more important for coders who want the entire coding community (and not just people working on the same project) to be able to suggest changes to their code.  This isn't how most scientists will use Github.  
 
 To get the full functionality of Github, you will eventually want to learn other concepts.  But, this can wait.  
 
@@ -38,53 +38,38 @@ To get the full functionality of Github, you will eventually want to learn other
 # Why should scientists use Github?
 
 1. Ends (or, nearly ends) the horror of keeping track of versions.
-
   Basically, we go from this: 
 <br />
 <br />
-
-
 ![](images/MessySaves.png)
 <br />
 <br />
-
 To this:
 <br />
 <br />
-
 ![](images/GitOrganization.png)
 <br />
 <br />
-
 When you open your respository, you only see the most recent version.  But, it easy to compare versions, and you can easily revert to previous versions. 
 <br />
 <br />
-
 2. Improves collaborative efforts.  Different researchers can work on the same files at the same time!
-
 3. It is easy to share and distribute files through the Github website.
+4. Your files are available anywhere!  Once I forgot my powercord while traveling and couldn't use my computer.  I was able to work from another computer and had access to all my work!  
 
 # Getting started
-You will need to get a [Github account](https://github.com).  You will also need to install the [Git software](https://git-scm.com/downloads) on your computer.  There are good instructions for installing these programs [here, Section 5.1](http://ohi-science.org/manual/#toolbox-software).
-<br />
-<br />
 
-> If you are a student you can get the micro account which includes 5 private repositories for free (normally a $7/month value).  You can sign up for the student account [here](https://education.github.com/pack).  Instructors can also request a free organization [account, "Request a discount"](https://education.github.com/).
-<br />
-<br />
+You will need to:
 
-I use RStudio to interact with Github.  There is also a stand-alone Git Gui, but I have never actually used it. 
+1. create a [Github account](https://github.com)  
+2. install the [Git software](https://git-scm.com/downloads) on your computer (there are good instructions for installing these programs [here, Section 5.1](http://ohi-science.org/manual/#toolbox-software))
+3. install [R](https://cran.r-project.org/) and [RStudio](https://www.rstudio.com/products/RStudio/). 
 
-You will also need to install [R](https://cran.r-project.org/) and [RStudio](https://www.rstudio.com/products/RStudio/). 
+I only interact with Github through RStudio.  There is also a stand-alone Git Gui, but I have never actually used it. 
 
 All three programs will need to be talking to each other.  Usually this magically happens, but sometimes trouble shooting is required.  Here is some information about fixing [common errors](http://ohi-science.org/manual/#toolbox-troubleshooting). 
-When RStudio and Github are communicating, there should be a Git tab in RStudio:
-<br />
-<br />
 
-![](images/Rstudio_and_Git_tab.png)
-<br />
-<br />
+> If you are a student you can get the micro account which includes 5 private repositories for free (normally a $7/month value).  You can sign up for the student account [here](https://education.github.com/pack).  Instructors can also request a free organization [account, "Request a discount"](https://education.github.com/).
 
 # Some Github terminology
 
@@ -120,7 +105,7 @@ When RStudio and Github are communicating, there should be a Git tab in RStudio:
 
 The *Add gitignore* option adds a document where you can identify files or file-types you want Github to ignore. These files will stay in on the local Github folder (the one on your computer), but will not be uploaded onto the web version of Github.
 
-The *Add a license* option adds a license that describes how other people can use your Github files (e.g., open source…but no one can profit from them….etc.).  This usually isn’t something you need to worry about.
+The *Add a license* option adds a license that describes how other people can use your Github files (e.g., open source, but no one can profit from them, etc.).  This usually isn't something you need to worry about.
 Our new repository!  
 
 Notice how the README.md file we created is automatically displayed at the bottom.
@@ -131,7 +116,9 @@ Notice how the README.md file we created is automatically displayed at the botto
 <br />
 <br />
 
-# Clone your repository
+# From here, you will work locally (on your computer)
+
+## Clone your repository
 This copies the Remote repository on Github.com to your local computer.
 
 ### Step 1
@@ -198,6 +185,7 @@ And the repository will be saved to the Github folder on your computer:
 Ta da!!!!  The folder doesn't contain much of interest, but we are going to change that.
 
 # Add files to local Github folder and save to remote Github
+
 The repository will contain:
 
 * .gitignore file
@@ -210,7 +198,9 @@ And, I typically create the following:
 * R scripts
 * etc.
 
-Whenever I add or change a file in the repository, it shows up in the Git tab of RStudio as a modified file:
+To make changes to the repository, you will work from your computer ("local Github").
+
+When files are changed in the local repository, these changes will be reflected in the Git tab of RStudio:
 <br />
 <br />
 
@@ -218,7 +208,7 @@ Whenever I add or change a file in the repository, it shows up in the Git tab of
 <br />
 <br />
 
-These are the codes to describe how the files are changed, (from the RStudio [cheatsheet](http://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf)):
+These are the codes RStudio uses to describe how the files are changed, (from the RStudio [cheatsheet](http://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf)):
 ![](images/modified.png)
 
 When you are ready to commit your changes, you follow these steps:
@@ -232,7 +222,7 @@ When you are ready to commit your changes, you follow these steps:
 We walk through this process below:
 
 ### Pull 
-From the Git tab, "Pull" the repository.  This makes sure your local repository is synced with the remote repository.  This is very important if other people are making changes to the repository.
+From the Git tab, "Pull" the repository.  This makes sure your local repository is synced with the remote repository.  This is very important if other people are making changes to the repository or if you are working from multiple computers.
 <br />
 <br />
 
@@ -262,7 +252,7 @@ Stage the files you want to commit.  In RStudio, this involves checking the "Sta
 <br />
 
 ### Check remote Github
-The files should be there:
+The files you added should be on github.com:
 <br />
 
 ![](images/Github_remote.png)
@@ -333,16 +323,42 @@ For on the fly rendering, the [atom](https://atom.io/) text editor is good.
 An [example](https://github.com/OHI-Science/ohiprep/tree/master/Global/NCEAS-Regions_v2014) of a Markdown file displayed in Github. 
 
 # Additional resources
+
 A good [reference](https://git-scm.com/book/en/v2) for learning about Github.
+
+
 A Github [cheatsheet](https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf)
 
+# One more tip: viewing rendered html files on Github
+By default html files are not rendered on the Github website.  That means the look like this:
+<br />
+<br />
+![](images/unrendered_html.png)
+<br />
+<br />
+This isn't very handy when you want to send a link to a nice looking html page. To get a rendered version, change the link from this:
+
+https://github.com/OHI-Science/ohiprep/blob/master/globalprep/Pressures_SST/create_sst_layer.html
+
+To this:
+
+https://rawgit.com/OHI-Science/ohiprep/master/globalprep/Pressures_SST/create_sst_layer.html
+
+(i.e., change the website from *github.com* to *rawgit.com* and get rid of the */blob*).  
+
+When you use the rawgit.com link, the output will be rendered:
+
+![](images/rendered_html.png)
+
+
+
 # So many other things to learn:
-1. Rendering html files from github.com...it's almost like you have your own website!
-2. Reading in datasets from different commits (very handy to troubleshoot and understand how data may have changed over time).
-3. Using an issues repository to document information and track progress.
-4. Working with branches.
-5. Using Rmarkdown.
-6. Creating a release of a Github repository. 
-7. Reverting to previous commits.
-8. Fixing merge conflicts.
-9. Using the shell.
+
+1. Reading in datasets from different commits (very handy to troubleshoot and understand how data may have changed over time).
+2. Using an issues repository to document information and track progress.
+3. Working with branches.
+4. Using Rmarkdown.
+5. Creating a release of a Github repository. 
+6. Reverting to previous commits.
+7. Fixing merge conflicts.
+8. Using the shell.
